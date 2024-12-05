@@ -1,52 +1,95 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 0;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc); /* Gradient stays */
+    color: #ffffff;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Collapsible Styling */
+/* Collapsible Button Styling */
 .collapsible {
-    background-color: #f1f1f1;
-    color: #444;
+    background: linear-gradient(135deg, #4e2a84, #682f99); /* Dark purple gradient instead of red */
+    color: #ffffff;
     cursor: pointer;
-    padding: 10px;
-    width: 100%;
+    padding: 15px;
+    width: 90%;
+    margin: 10px auto;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 18px;
-    margin: 5px 0;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.collapsible:hover {
+    background: linear-gradient(135deg, #62308a, #5f2688); /* Darker purple hover effect */
+    transform: scale(1.02);
 }
 
 .collapsible:after {
     content: '\002B'; /* Plus icon */
-    font-size: 13px;
+    font-size: 20px;
     float: right;
+    transition: transform 0.3s ease;
 }
 
 .collapsible.active:after {
     content: "\2212"; /* Minus icon */
+    transform: rotate(90deg);
 }
 
+/* Content Section */
 .content {
-    padding: 0 15px;
+    padding: 20px;
     display: none;
     overflow: hidden;
-    background-color: #f9f9f9;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background stays */
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.5s ease;
 }
 
 textarea {
     width: 100%;
     height: 100px;
     margin-bottom: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffffff; /* White border for text area */
+    padding: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9); /* Light background stays */
+    color: #333333;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #682f99; /* Dark purple border */
 }
 
 button {
     margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #682f99, #5f2688); /* Dark purple gradient for buttons */
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #5f2688, #4e2a84); /* Darker purple hover */
+    transform: scale(1.05);
 }
