@@ -9,12 +9,6 @@
 <body>
     <h1>Hunt Toolkit</h1>
 
-    <!-- Webhook Request Forwarder Section -->
-    <button class="collapsible">Webhook Request Forwarder</button>
-    <div class="content">
-        <h2>Webhook Response</h2>
-        <pre id="response"></pre>
-    </div>
 
 
     <!-- Base64 Section -->
@@ -35,10 +29,21 @@
         <p>Result: <span id="resultURL"></span></p>
     </div>
 
+    <!-- Hash Section -->
+    <button class="collapsible">Hash Generator</button>
+    <div class="content">
+        <textarea id="inputHash" placeholder="Enter text to hash"></textarea><br>
+        <button onclick="generateHash()">Generate Hash</button>
+        <p>MD5: <span id="resultMD5"></span></p>
+        <p>SHA-1: <span id="resultSHA1"></span></p>
+        <p>SHA-256: <span id="resultSHA256"></span></p>
+    </div>
+
     <!-- Include individual JS files -->
     <script src="base64.js"></script>
     <script src="url.js"></script>
-    <script src="webhook.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <script src="hashGenerator.js"></script>
 </body>
 </html>
