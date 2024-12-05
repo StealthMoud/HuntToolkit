@@ -9,6 +9,14 @@
 <body>
     <h1>Hunt Toolkit</h1>
 
+    <!-- Webhook Request Forwarder Section -->
+    <button class="collapsible">Webhook Request Forwarder</button>
+    <div class="content">
+        <h2>Webhook Response</h2>
+        <pre id="response"></pre>
+    </div>
+
+
     <!-- Base64 Section -->
     <button class="collapsible">Base64 Encode/Decode</button>
     <div class="content">
@@ -27,6 +35,10 @@
         <p>Result: <span id="resultURL"></span></p>
     </div>
 
+    <!-- Include individual JS files -->
+    <script src="base64.js"></script>
+    <script src="url.js"></script>
+    <script src="webhook.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
