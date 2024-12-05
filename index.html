@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hunt Toolkit</h1>
+    <div>
+        <h2>Base64 Encode/Decode</h2>
+        <textarea id="inputBase64" placeholder="Enter text"></textarea>
+        <button onclick="base64Encode()">Encode</button>
+        <button onclick="base64Decode()">Decode</button>
+        <p>Result: <span id="resultBase64"></span></p>
+    </div>
+    <div>
+        <h2>URL Encode/Decode</h2>
+        <textarea id="inputURL" placeholder="Enter text"></textarea>
+        <button onclick="urlEncode()">Encode</button>
+        <button onclick="urlDecode()">Decode</button>
+        <p>Result: <span id="resultURL"></span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
