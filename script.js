@@ -1,3 +1,4 @@
+// Base64 Functions
 function base64Encode() {
     const input = document.getElementById('inputBase64').value;
     const result = btoa(input);
@@ -14,6 +15,7 @@ function base64Decode() {
     }
 }
 
+// URL Functions
 function urlEncode() {
     const input = document.getElementById('inputURL').value;
     const result = encodeURIComponent(input);
@@ -25,3 +27,17 @@ function urlDecode() {
     const result = decodeURIComponent(input);
     document.getElementById('resultURL').innerText = result;
 }
+
+// Collapsible Sections
+const collapsibles = document.querySelectorAll(".collapsible");
+collapsibles.forEach(button => {
+    button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+});

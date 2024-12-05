@@ -8,20 +8,25 @@
 </head>
 <body>
     <h1>Hunt Toolkit</h1>
-    <div>
-        <h2>Base64 Encode/Decode</h2>
-        <textarea id="inputBase64" placeholder="Enter text"></textarea>
+
+    <!-- Base64 Section -->
+    <button class="collapsible">Base64 Encode/Decode</button>
+    <div class="content">
+        <textarea id="inputBase64" placeholder="Enter text"></textarea><br>
         <button onclick="base64Encode()">Encode</button>
         <button onclick="base64Decode()">Decode</button>
         <p>Result: <span id="resultBase64"></span></p>
     </div>
-    <div>
-        <h2>URL Encode/Decode</h2>
-        <textarea id="inputURL" placeholder="Enter text"></textarea>
+
+    <!-- URL Section -->
+    <button class="collapsible">URL Encode/Decode</button>
+    <div class="content">
+        <textarea id="inputURL" placeholder="Enter text"></textarea><br>
         <button onclick="urlEncode()">Encode</button>
         <button onclick="urlDecode()">Decode</button>
         <p>Result: <span id="resultURL"></span></p>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
