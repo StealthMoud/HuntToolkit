@@ -1,15 +1,12 @@
-// Base64 Functions
 function base64Encode() {
     const input = document.getElementById('inputBase64').value;
-    const result = btoa(input);
-    document.getElementById('resultBase64').innerText = result;
+    document.getElementById('resultBase64').innerText = btoa(input);
 }
 
 function base64Decode() {
     const input = document.getElementById('inputBase64').value;
     try {
-        const result = atob(input);
-        document.getElementById('resultBase64').innerText = result;
+        document.getElementById('resultBase64').innerText = atob(input);
     } catch (error) {
         alert("Invalid Base64 string!");
     }

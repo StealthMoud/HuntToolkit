@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt Toolkit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Dark/Light Mode Toggle Button -->
+<button id="mode-toggle" class="mode-toggle">Switch to Dark Mode</button>
+
+<h1>Hunt Toolkit</h1>
+
+<!-- Encoding and Decoding Tools -->
+<div class="collapsible-section">
+    <button class="collapsible">Encoding and Decoding Tools</button>
+    <div class="content">
+        <button class="tool-button" data-tool="encoding-decoding/base64">Base64 Encode/Decode</button>
+        <div class="tool-details" id="tool-base64" style="display: none;">
+            <p>Base64 Encode/Decode tool explanation here...</p>
+        </div>
+
+        <button class="tool-button" data-tool="encoding-decoding/url">URL Encode/Decode</button>
+        <div class="tool-details" id="tool-url" style="display: none;">
+            <p>URL Encode/Decode tool explanation here...</p>
+        </div>
+
+        <button class="tool-button" data-tool="encoding-decoding/html-entity">HTML Entity Encode/Decode</button>
+        <div class="tool-details" id="tool-html-entity" style="display: none;">
+            <p>HTML Entity Encode/Decode tool explanation here...</p>
+        </div>
+
+        <button class="tool-button" data-tool="encoding-decoding/jwt">JWT Decoder</button>
+        <div class="tool-details" id="tool-jwt" style="display: none;">
+            <p>JWT Decoder tool explanation here...</p>
+        </div>
+
+        <button class="tool-button" data-tool="encoding-decoding/rot13">ROT13 Cipher</button>
+        <div class="tool-details" id="tool-rot13" style="display: none;">
+            <p>ROT13 Cipher tool explanation here...</p>
+        </div>
+    </div>
+</div>
+
+<div id="tool-container"></div>
+
+<script src="scripts/core.js"></script>
+<script>
+    // Dark/Light Mode Toggle Script
+    const modeToggleButton = document.getElementById('mode-toggle');
+    const body = document.body;
+
+    modeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDarkMode = body.classList.contains('dark-mode');
+        modeToggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    });
+</script>
+</body>
+</html>
